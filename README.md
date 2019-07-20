@@ -1,6 +1,6 @@
 # DOCKER TUTORIAL
 
-## -------------------------------------------------
+
 * docker ps:  shows the currently running containers
 
 * docker ps —all:  shows all the containers that existed. To delete them from the image cache, see “docker system prune” below.
@@ -37,7 +37,7 @@
     N.B: If you run the same command on 2 separate terminals, you'll get 2 different containers.
          Therefore, editing one of them will not affect the other.
 
-**********
+
 * docker build . : to build a docker image. Mind well, you need to be in the correct dir and have a Dockerfile.
     * The “.” Is what is called a BUILD CONTEXT.
     	* E.g: ~/cloud_training/udemy/redis-image
