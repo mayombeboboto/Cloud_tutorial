@@ -1,4 +1,4 @@
-# DOCKER TUTORIAL
+## DOCKER TUTORIAL
 
 
 * docker ps:  shows the currently running containers
@@ -51,6 +51,19 @@
   to the port inside your container image
     * Make sure the port number corresponds to your index.js!
     	* E.g: docker run -p 9008:8080 gradie/simpleweb
+
+* docker run -d image: runs the image in the background.
+* dcoker stop container-id: self-explanatory.
+
+# DOCKER-COMPOSE
+Docker-compose is obtained by creating a yml file.
+Its purpose is to make 2 images talk.
+* docker-compose up: runs your docker-compose
+* docker-compose up --build: builds your docker-compose and runs it.
+* docker-compose down: brings down all running images mentioned in your docker-compose.
+* docker-compose ps: displays working containers.
+    N.B: Make sure you are in the same directory as you are docker-compose.yml.
+
 
 
 
