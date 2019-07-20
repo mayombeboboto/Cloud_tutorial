@@ -1,6 +1,6 @@
 # DOCKER TUTORIAL
 
-**********
+## -------------------------------------------------
 * docker ps:  shows the currently running containers
 
 * docker ps —all:  shows all the containers that existed. To delete them from the image cache, see “docker system prune” below.
