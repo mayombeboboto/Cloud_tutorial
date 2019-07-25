@@ -46,7 +46,9 @@
     * N.B: the last portion ":..." like ":1.0" is our case is optional. That said, when omitted, it defaults to "latest"
     	* docker build -t gradie/busybox:1.0 .
     
-
+* docker build -f your_docker_file directory: this is a tweak when your docker file has a different name than "Dockerfile"
+        * E.g: docker build -f Dockerfile.dev .
+        
 * docker run -p incoming_port:port_inside_container <image-id>: this maps the incoming port from the OS 
   to the port inside your container image
     * Make sure the port number corresponds to your index.js!
