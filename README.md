@@ -66,7 +66,15 @@ Its purpose is to make 2 images talk.
 * docker-compose ps: displays working containers.
     N.B: Make sure you are in the same directory as you are docker-compose.yml.
 
+* docker run -p local_port:remote_port -v /app/node_modules -v $(pwd):/app <image_id>: to build docker volumes.
+    The "-v /app/node_modules" means do not map that folder. It is set in stone!
+    -v stands for: whenever.
 
+* Instead of always running the above command, we can create a docker-compose.yml file and add your volumes settings in there.
+
+* docker run -it <image-id> [test command to run a test]
+        * E.g: docker run -it 8182bb26a62f npm run test (This is for React)
+               docker run -it 8182bb26a62f rebar eu (For erlang) Tp be tested.
 
 
 
