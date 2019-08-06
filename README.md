@@ -15,6 +15,8 @@
 
 * docker system prune: deletes all the images you have locally.
     N.B: This will delete all the images you have locally.
+* docker rm $(docker ps -aq): to delete all containers.
+    Note that -q only display numeric IDs
 
 * docker logs container-id: Shows what was run in the container.
     E.g: Open 2 terminals, build an image like gradie/simpleweb
