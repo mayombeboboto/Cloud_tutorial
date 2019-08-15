@@ -7,6 +7,9 @@
 
 * docker run = docker create + docker start commands
 	What happens is whenever you run: "docker run", it actually first create the image then start it.
+    E.g: docker start hello-world -> This yields an ID
+         docker create -a ID. 
+    Note that -a helps keep track of the output.
 
 * docker start container-id:  runs the container command but not in interactive fashion.
     * Note that the command in question is the one the container ran.

@@ -4,9 +4,9 @@ const process = require('process');
 
 const app = express();
 const client = redis.createClient({
-  host: 'redis-server'
+  host: 'redis-server' // This points to the redis-server defined in docker-compose
 });
-client.set('visits', 0);
+client.set('visits', 0); 
 
 app.get('/', (req, res) => {
   process.exit(0);
