@@ -3,7 +3,9 @@
 
 * docker ps:  shows the currently running containers
 
-* docker ps —all:  shows all the containers that existed. To delete them from the image cache, see “docker system prune” below.
+* docker ps -a -q: only returns a list of container ids.
+
+* docker ps -a (or -all):  shows all the containers that existed. To delete them from the image cache, see “docker system prune” below.
 
 * docker run = docker create + docker start commands
 	What happens is whenever you run: "docker run", it actually first create the image then start it.
@@ -15,6 +17,16 @@
 
 * docker system prune: deletes all the images you have locally.
     N.B: This will delete all the images you have locally.
+
+* docker rm <container_id>: to remove a container. This way, even when you run docker ps -a, you won't find it anymore.
+
+* docker rm $(docker ps -a -q): to remove all container ids at once.
+
+* docker rmi <image_name>: this deletes only one image from the image cache when no container is using it.
+        * E.g: dokcer rmi visits_node-app
+
+* docker run -it -d <image_name>: runs the container based_image in the background.
+    -d stands for detached.
 
 * docker logs container-id: Shows what was run in the container.
     E.g: Open 2 terminals, build an image like gradie/simpleweb
@@ -76,7 +88,12 @@ Its purpose is to make 2 images talk.
         * E.g: docker run -it 8182bb26a62f npm run test (This is for React)
                docker run -it 8182bb26a62f rebar eu (For erlang) Tp be tested.
 
-
+The restart section of a docker-compose file can have one the below values:
+- "no": Never attempt to restart this container if it stops or crashes
+    * Please keep the no inside the quotes or else, yaml interprets it differently
+- always: If this container stops for whichever reason, restart
+- on-failure: Only restart if the container crashed
+- unless-stopped: Always restart unless we (the dev) forcibly stop it.
 
 
 
