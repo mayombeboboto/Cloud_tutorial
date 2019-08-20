@@ -9,6 +9,9 @@
 
 * docker run = docker create + docker start commands
 	What happens is whenever you run: "docker run", it actually first create the image then start it.
+    E.g: docker start hello-world -> This yields an ID
+         docker create -a ID. 
+    Note that -a helps keep track of the output.
 
 * docker start container-id:  runs the container command but not in interactive fashion.
     * Note that the command in question is the one the container ran.
@@ -17,6 +20,8 @@
 
 * docker system prune: deletes all the images you have locally.
     N.B: This will delete all the images you have locally.
+* docker rm $(docker ps -aq): to delete all containers.
+    Note that -q only display numeric IDs
 
 * docker rm <container_id>: to remove a container. This way, even when you run docker ps -a, you won't find it anymore.
 

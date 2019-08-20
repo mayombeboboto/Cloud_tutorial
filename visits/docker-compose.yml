@@ -1,9 +1,15 @@
 version: '3'
 services: 
-  redis-server:
-    image: 'redis'
+  redis-server: # The name of our service
+    image: 'redis' # Image name in single quotes
   node-app:
+<<<<<<< HEAD
     restart: on-failure 
     build: .
     ports:
+=======
+    restart: always 
+    build: . # The dot means build the image from the current dir. E.g: ~/CloudTraining/visits
+    ports:   # This maps the built image port to the reddis port.
+>>>>>>> 6df5b592273053968c7d75e1b0e4522b19214d75
       - "4001:8081"
