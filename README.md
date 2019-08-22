@@ -100,6 +100,14 @@ The restart section of a docker-compose file can have one the below values:
 - on-failure: Only restart if the container crashed
 - unless-stopped: Always restart unless we (the dev) forcibly stop it.
 
+REACT PORTION:
+* npm instal -g create-react-app: Generates empty react project.
+* create-react-app project_name: Generates a new react project.
+
+npm run start, npm run test and npm run build.
+
+docker run image-ID npm run test: To test your container image.
+
 
 
 
